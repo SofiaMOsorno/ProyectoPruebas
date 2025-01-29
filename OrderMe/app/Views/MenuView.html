@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Order Me / main</title>
+        <meta charset="UTF-8">
+        <meta content="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <link rel="stylesheet" href="/CSS/P05.css">
+
+        <script src="https://kit.fontawesome.com/95e2386fb6.js" crossorigin="anonymous"></script>
+
+        <!-- Fuente titular-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    </head>
+    <body style=" background-image: url('/Views/Media/Orderly.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;">
+        <h1 class="mainTitle" id="MainTitle" style="margin-bottom: 1%;">
+            Order Me
+        </h1>
+        <div class="contenedorBotones">
+            <a class="recuadroT volver" href="inicio">Salir</a>
+            <a class="recuadroT VerPedido" href="order">Orden</a>
+        </div>
+        <a class="Subir" href="#MainTitle"><i id="Subir" class="fa-solid fa-chevron-up fa-3x mt-2"></i></a>
+        <img class="DecLine" src="/Views/Media/DecorationLine.png">
+        <div class="contenedorCategoríasGrande">
+            <div class="contenedorCategorías">
+                <a class="recuadroT" id="categ-Bebidas" href="#Bebidas" accesskey="e">
+                    Bebidas
+                </a>
+                <a class="recuadroT" id="categ-Entradas" href="#Entradas" accesskey="f">
+                    Entradas
+                </a>
+                <a class="recuadroT" id="categ-Entradas" href="#Cortes" accesskey="a"><!--Ni de broma hago un html para cada una aqui ya entra script tambien-->
+                    Cortes
+                </a>
+                <a class="recuadroT" id="categ-Pizas" href="#Pizzas" accesskey="b">
+                    Pizzas
+                </a>
+            </div>
+            <div class="contenedorCategorías">
+                <a class="recuadroT" id="categ-Pastas" href="#Pastas" accesskey="c">
+                    Pastas
+                </a>
+                <a class="recuadroT" id="categ-Salads" href="#Salads" accesskey="d">
+                    Ensaladas
+                </a>
+                <a class="recuadroT" id="categ-Postres" href="#Postres" accesskey="g">
+                    Postres
+                </a>
+                <a class="recuadroT" id="categ-Extras" href="#Extras" accesskey="h">
+                    Extras
+                </a>
+            </div>
+        </div>
+
+        <!-- Cuadro de búsqueda por texto -->
+        <div class="SearchContainer" style="width: 100%; display: flex; flex-direction: column; align-items: center; margin: 20px 0;">
+
+            <div class="SearchInputContainer" style="width: 60%; max-width: 800px;">
+                <input type="text" id="searchInput" placeholder="Buscar productos..." 
+                       style="width: 100%; padding: 15px; border-radius: 25px; border: none; 
+                              background-color: rgba(255, 255, 255, 0.756); color: white; 
+                              font-size: 1.2em; text-align: center;">
+            </div>
+
+            <div id="searchResults" class="contenedorProductos" style="margin-top: 20px;">
+                <!-- Aquí salen los resultados de la búsqueda -->
+
+            </div>
+
+        </div>
+
+        <!-- Sección de bebidas -->
+        <img class="DecLine" src="/Views/Media/DecorationLine.png">
+        <section id="Bebidas" role="region" aria-labelledby="Bebidas">
+            <div class="recuadroT" id="Categoria" style="text-align: center;">Bebidas</div>
+            <div class="contenedorProductos">
+                <!-- Aquí se ponen los productos dinámicamente -->
+
+            </div>
+        </section>
+
+        <!-- Sección de entradas -->
+        <img class="DecLine" src="/Views/Media/DecorationLine.png">
+        <section id="Entradas" role="region" aria-labelledby="Entradas">
+            <div class="recuadroT" id="Categoria" style="text-align: center;">Entradas</div>
+            <div class="contenedorProductos">
+                <!-- Aquí se ponen los productos dinámicamente -->
+                
+            </div>
+        </section>
+
+        <!-- Sección de cortes -->
+        <img class="DecLine" src="/Views/Media/DecorationLine.png">
+        <section id="Cortes" role="region" aria-labelledby="Cortes">
+            <div class="recuadroT" id="Categoria" style="text-align: center;">Cortes</div>
+            <div class="contenedorProductos">
+                <!-- Aquí se ponen los productos dinámicamente -->
+                
+            </div>
+        </section>
+
+        <!-- Sección de pizzas -->
+        <img class="DecLine" src="/Views/Media/DecorationLine.png">
+        <div id="Pizzas" class="section" role="region" aria-labelledby="Pizzas">
+            <div id="Categoria" class="recuadroT" style="text-align: center;">Pizzas</div>
+            <div class="contenedorProductos">
+                <!-- Aquí se ponen los productos dinámicamente -->
+
+            </div>
+        </div>
+
+        <!-- Sección de pastas -->
+        <img class="DecLine" src="/Views/Media/DecorationLine.png">
+        <section id="Pastas" role="region" aria-labelledby="Pastas">
+            <div class="recuadroT" id="Categoria" style="text-align: center;">Pastas</div>
+            <div class="contenedorProductos">
+                <!-- Aquí se ponen los productos dinámicamente -->
+
+            </div>
+        </section>
+
+        <!-- Sección de ensaladas -->
+        <img class="DecLine" src="/Views/Media/DecorationLine.png">
+        <section id="Salads" role="region" aria-labelledby="Salads">
+            <div class="recuadroT" id="Categoria" style="text-align: center;">Ensaladas</div>
+            <div class="contenedorProductos">
+                <!-- Aquí se ponen los productos dinámicamente -->
+                
+            </div>
+        </section>
+
+        <!-- Sección de postres -->
+        <img class="DecLine" src="/Views/Media/DecorationLine.png">
+        <section id="Postres" role="region" aria-labelledby="Postres">
+            <div class="recuadroT" id="Categoria" style="text-align: center;">Postres</div>
+            <div class="contenedorProductos">
+                <!-- Aquí se ponen los productos dinámicamente -->
+                
+            </div>
+        </section>
+
+        <!-- Sección de extras -->
+        <img class="DecLine" src="/Views/Media/DecorationLine.png">
+        <section id="Extras" role="region" aria-labelledby="Extras">
+            <div class="recuadroT" id="Categoria" style="text-align: center;">Extras</div>
+            <div class="contenedorProductos">
+                <!-- Aquí se ponen los productos dinámicamente -->
+                
+            </div>
+        </section>
+
+
+<!--/////////////////////////////////Scripts/////////////////////////////////-->
+        <script>
+            // JavaScript para incrementar y decrementar el valor de los botones
+            const input = document.getElementById('custom-number-input');
+
+            function increment() {
+                input.stepUp(); // Aumenta el valor en el paso especificado
+            }
+
+            function decrement() {
+                input.stepDown(); // Disminuye el valor en el paso especificado
+            }
+        </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Controla el funcionamiento de la página (botones, etc)-->
+    <script src="../Controllers/menuController.js"></script>
+
+    <!-- Mete los productos a la página de manera dinámica desde Mongo -->
+    <script src="../Controllers/menuLoader.js"></script>
+    </body>
+</html>
